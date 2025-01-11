@@ -5,7 +5,7 @@ import type {
     MicroCMSListContent,
 } from "microcms-js-sdk";
 
-export type Member ={
+export type Created ={
     name: string;
     position: string;
     profile: string;
@@ -37,10 +37,10 @@ const client = createClient({
     apiKey: process.env.MICROCMS_API_KEY,
 })
 
-export const getMemberList = async (queries?: MicroCMSQueries) => {
+export const getCreatedList = async (queries?: MicroCMSQueries) => {
     const listData = await client
-        .getList<Member>({
-            endpoint: "members",
+        .getList<Created>({
+            endpoint: "created",
             queries,
         });
 
