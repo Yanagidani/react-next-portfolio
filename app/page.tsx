@@ -1,13 +1,13 @@
 import styles from "./page.module.css";
 import Image from "next/image";
-import { getNewsList } from "@/app/_libs/microcms";
-import { TOP_NEWS_LIMIT } from "@/app/_constants";
-import NewsList from "@/app/_components/NewsList";
+import { getBlogList } from "@/app/_libs/microcms";
+import { TOP_BLOG_LIMIT } from "@/app/_constants";
+import BlogList from "@/app/_components/BlogList";
 import ButtonLink from "@/app/_components/ButtonLink";
 
 export default async function Home() {
-    const data = await getNewsList({
-        limit: TOP_NEWS_LIMIT,
+    const data = await getBlogList({
+        limit: TOP_BLOG_LIMIT,
     });
     return (
         <>
@@ -26,11 +26,11 @@ export default async function Home() {
                     height={1200}
                 />
             </section>
-            <section className={styles.news}>
-                <h2 className={styles.newsTitle}>News</h2>
-                <NewsList news={data.contents} />
-                <div className={styles.newsLink}>
-                    <ButtonLink href="/news">もっとみる</ButtonLink>
+            <section className={styles.blog}>
+                <h2 className={styles.blogTitle}>Blog</h2>
+                <BlogList blog={data.contents} />
+                <div className={styles.blogLink}>
+                    <ButtonLink href="/blog">もっとみる</ButtonLink>
                 </div>
             </section>
         </>

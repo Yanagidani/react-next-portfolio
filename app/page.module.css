@@ -34,7 +34,7 @@
 }
 
 
-.news{
+.blog{
   position: relative;
   background-color: #fff;
   width: 840px;
@@ -43,11 +43,11 @@
   border-radius: var(--border-radius);
 }
 
-.newsTitle {
+.blogTitle {
   font-size: 1.5rem;
 }
 
-.newsLink {
+.blogLink {
   position: absolute;
   right: -40px;
   bottom: -40px;
@@ -55,7 +55,7 @@
 
 
 @media (max-width: 1000px) {
-  .news {
+  .blog {
     width: calc(100% - 160px);
   }
 }
@@ -85,11 +85,11 @@
     justify-content: center;
     z-index: -1;
   }
-  .news {
+  .blog {
     width: calc(100% - 32px);
     padding: 16px 24px;
   }
-  .newsLink {
+  .blogLink {
     position: relative;
     right: auto;
     bottom: auto;
