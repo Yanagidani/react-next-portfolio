@@ -12,7 +12,7 @@ type Props = {
     blog: Blog[];
 };
 
-export default function NewsList({ blog }: Props) {
+export default function BlogList({ blog }: Props) {
     if (blog.length === 0) {
         return <p>記事がありません</p>;
     }
@@ -32,7 +32,7 @@ export default function NewsList({ blog }: Props) {
                         ) : (
                             <Image
                                 className={styles.image}
-                                src="/no-mage.png"
+                                src="/no-Image.png"
                                 alt="No Image"
                                 width={1200}
                                 height={630}

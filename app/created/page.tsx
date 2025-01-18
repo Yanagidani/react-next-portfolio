@@ -23,7 +23,7 @@ export default async function Page(){
                             <dl>
                                 <dt className={styles.name}>{created.name}</dt>
                                 <dd className={styles.position}>{created.position}</dd>
-                                <dd className={styles.profile}>{created.profile}</dd>
+                                
                             </dl>
                         </li>
                     ))}

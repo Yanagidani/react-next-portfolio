@@ -1,10 +1,22 @@
 .text {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 1.3rem;
   }
+
+.container {
+    background-color: #EAD9FF;
+    font-size: 1.3rem;
+}
   
   @media (max-width: 640px) {
     .text {
       text-align: left;
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+    .container {
+        background-color: #EAD9FF;
+        font-size: 1.3rem;
     }
   }
