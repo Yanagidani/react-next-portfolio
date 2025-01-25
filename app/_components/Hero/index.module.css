@@ -25,7 +25,15 @@
 }
 
 .sub::before {
-    content: "";
+    content: '';
+    display: block;
+    height: 1px;
+    width: 20px;
+    background-color: var(--color-text-unpainted);
+}
+
+.sub::after {
+    content: '';
     display: block;
     height: 1px;
     width: 20px;
