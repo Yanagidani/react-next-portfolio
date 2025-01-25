@@ -9,6 +9,7 @@ function generateStars() {
     const stars = [];
     for (let i = 0; i < 100; i++) {
       const style = {
+        top: `-${3}vh`, // ランダムなY位置
         left: `${Math.random() * 100}vw`, // ランダムなX位置
         animationDelay: `${Math.random() * 5}s`, // ランダムな開始タイミング
         animationDuration: `${4 + Math.random() * 3}s`, // ランダムな速度
