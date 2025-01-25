@@ -12,11 +12,11 @@ type Props ={
 };
 
 export default async function Page({ params }: Props) {
-const current = parseInt(params.current, 10);
+    const current = parseInt(params.current, 10);
 
-if (Number.isNaN(current) || current < 1) {
-    notFound();
-}
+    if (Number.isNaN(current) || current < 1) {
+        notFound();
+    }
 
     const { contents: blog, totalCount } =await getBlogList({
         limit: BLOG_LIST_LIMIT,

@@ -5,4 +5,13 @@
     margin: -40px auto 0;
     padding: 80px;
     border-radius: 8px;
+    border: 9px solid #EAD9FF;
 }
+
+@media (max-width: 640px) {
+.container {
+    border: 9px solid #EAD9FF;
+    width: 400px;
+    height: 250vh;
+}
+  }
