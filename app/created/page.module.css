@@ -1,84 +1,97 @@
+/* 全体のコンテナ */
 .container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 110vh;
-    
-}
-
-.text {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.list {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    margin-bottom: 80px;
-}
-
-.list:nth-child(even) {
-    flex-direction: row-reverse;
-}
-
-.intro {
-    font-size: 1.3rem;
-    margin-bottom: 40px;
-
-}
-
-.image {
-    width: 240px;
-    height: auto;
-    border-radius: var(--border-radius);
-}
-
-
-
-.position {
-    margin-bottom: 8px;
-}
-
-.profile {
-    font-size: 0.9rem;
-}
-
-.footer {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f8f3fc, #eae1fa);
+    color: #333;
+    padding: 2rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-top: 1px solid var(--color-border);
-    padding-top: 40px;
-    text-align: center;
-    gap: 24px;
-}
-
-.message {
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-.empty {
-    margin-bottom: 40px;
-}
-
-@media (max-width: 640px) {
-    .text {
-      text-align: left;
-      margin-bottom: 40px;
+  }
+  
+  /* セクションの共通スタイル */
+  .section {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 1rem 0;
+    text-align: left; /* 全体を左揃え */
+    position: relative;
+  }
+  
+  /* セクションタイトル */
+  .h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #6c5ce7;
+    margin-left: 2rem; /* 左位置を統一 */
+  }
+  
+  /* 段落 */
+  .section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-left: 2rem; /* h2 と同じ左位置に揃える */
+    margin-top: 0; /* 段落とタイトルの間隔は h2 で調整 */
+  }
+  
+  /* プロフィール写真 */
+  .profileImage {
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 1rem auto;
+  }
+  
+  /* スキルリスト */
+  .skillList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .skillList li {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #4b0082;
+    margin-left: 2rem; /* h2 と位置を揃える */
+  }
+  
+  /* セクション間の余白 */
+  .section + section {
+    margin-top: 2rem;
+  }
+  
+  /* ホバーアニメーション */
+  .section:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+  
+  /* レスポンシブ対応 */
+  @media (max-width: 640px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    .section {
+      padding: 1.5rem;
+    }
+  
+    .h2 {
+      font-size: 1.5rem;
+    }
+  
+    .section p {
       font-size: 1rem;
     }
-    .container {
-
-        background-color: #fff;
-        font-size: 1.3rem;
-        position: relative;
-        right: auto;
-        bottom: auto;
-        margin-top: 16px;
-        left: auto;
-        width: 50%;
-        height: 150vh;
+  
+    .skillList li {
+      font-size: 1rem;
     }
   }
+  

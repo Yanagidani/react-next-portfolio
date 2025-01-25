@@ -9,7 +9,7 @@ type Props ={
     data: Blog;
 };
 
-export default function article({ data }: Props) {
+export default function Article({ data }: Props) {
     return (
         <main>
             <h1 className={styles.title}>{data.title}</h1>

@@ -38,10 +38,10 @@ function SearchFieldComponent() {
                     className={styles. searchInput}
 
                     />
-    </ label>
-    </ form>
+            </ label>
+        </ form>
 
-    );
+        );
 
 } 
 

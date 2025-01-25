@@ -22,7 +22,7 @@ export type Blog ={
     content: string;
     thumbnail?: MicroCMSImage;
     category: Category;
-} & MicroCMSListContent
+} & MicroCMSListContent;
 
 if (!process.env.MICROCMS_SERVICE_DOMAIN) {
     throw new Error("MICROCMS_SERVICE_DOMAIN is reequired.");
@@ -35,7 +35,7 @@ if (!process.env.MICROCMS_API_KEY) {
 const client = createClient({
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
     apiKey: process.env.MICROCMS_API_KEY,
-})
+});
 
 export const getCreatedList = async (queries?: MicroCMSQueries) => {
     const listData = await client
@@ -48,9 +48,8 @@ export const getCreatedList = async (queries?: MicroCMSQueries) => {
 };
 
 export const getBlogList = async (queries?: MicroCMSQueries) => {
-    const listData = await client
-        .getList<Blog>({
-            endpoint: "blog",
+    const listData = await client.getList<Blog>({
+            endpoint: 'blog',
             queries,
         });
 
@@ -65,6 +64,11 @@ export const getBlogDetail = async (
         endpoint: "blog",
         contentId,
         queries,
+        customRequestInit: {
+            next: {
+              revalidate: queries?.draftKey === undefined ? 60 : 0,
+            },
+        },
     });
     return detailData;
 };
@@ -80,3 +84,19 @@ export const getCategoryDetail = async (
     });
     return detailData;
 };
+
+export const getAllBlogList = async () => {
+    const listData = await client.getAllContents<Blog>({
+      endpoint: 'blog',
+    });
+  
+    return listData;
+};
+  
+export const getAllCategoryList = async () => {
+    const listData = await client.getAllContents<Category>({
+      endpoint: 'categories',
+    });
+  
+    return listData;
+  };
