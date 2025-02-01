@@ -7,12 +7,16 @@
   padding: 20px;
 }
 
+.intro h1 {
+  font-size: 45px;
+}
+
 .intro, .hobbies, .skills {
   margin-bottom: 20px;
   width: 100%; /* 横幅を100%に */
 }
 
-.intro h1, .hobbies h2, .skills h2, .name h2 {
+.hobbies h2, .skills h2, .name h2 {
   text-align: left; /* h2を左寄せ */
   margin-left: 15%; /* 画面幅の10%分左に寄せる */
 }
@@ -67,8 +71,13 @@
   @media (max-width: 640px) {
     .container {
       padding: 1rem;
+      height: 114.57vh;
     }
   
+    .intro h1 {
+      font-size: 25px;
+    }
+
     .section {
       padding: 1.5rem;
     }
