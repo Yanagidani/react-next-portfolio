@@ -43,7 +43,6 @@ export const getCreatedList = async (queries?: MicroCMSQueries) => {
             endpoint: "created",
             queries,
         });
-
     return listData;
 };
 
@@ -52,7 +51,7 @@ export const getBlogList = async (queries?: MicroCMSQueries) => {
             endpoint: 'blog',
             queries,
         });
-
+        console.log('message', listData)
     return listData;
 };
 
@@ -70,6 +69,7 @@ export const getBlogDetail = async (
             },
         },
     });
+    console.log("detailData", detailData)
     return detailData;
 };
 
@@ -78,7 +78,7 @@ export const getCategoryDetail = async (
     queries?: MicroCMSQueries
 ) => {
     const detailData = await client.getListDetail<Category>({
-        endpoint: "categories",
+        endpoint: "category",
         contentId,
         queries,
     });
@@ -95,7 +95,7 @@ export const getAllBlogList = async () => {
   
 export const getAllCategoryList = async () => {
     const listData = await client.getAllContents<Category>({
-      endpoint: 'categories',
+      endpoint: 'category',
     });
   
     return listData;

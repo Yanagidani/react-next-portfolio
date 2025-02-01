@@ -21,7 +21,7 @@ export default async function Page({ params }: Props) {
   const category = await getCategoryDetail(params.id).catch(notFound);
 
   const { contents: blog, totalCount } = await getBlogList({
-    filters: `category[equals]${category.id}`,
+    filters: `categories[equals]${category.id}`,
     limit: BLOG_LIST_LIMIT,
     offset: BLOG_LIST_LIMIT * (current - 1),
   });

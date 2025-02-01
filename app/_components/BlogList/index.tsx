@@ -7,12 +7,14 @@ import Category from "../Category";
 import Date from "../Date";
 
 import type { Blog } from "@/app/_libs/microcms";
+import { useEffect } from "react";
 
 type Props = {
     blog: Blog[];
 };
 
 export default function BlogList({ blog }: Props) {
+    
     if (blog.length === 0) {
         return <p>記事がありません</p>;
     }

@@ -16,20 +16,11 @@ type Props ={
 export default async function Page({ params }: Props) {
 const current = parseInt(params.current, 10);
 
-if (Number.isNaN(current) || current < 1) {
-    notFound();
-}
-
-    const category =await getCategoryDetail(params.id).catch(notFound);
     const { contents: blog, totalCount } =await getBlogList({
-        filters: `category[equals]${category.id}`,
+
         limit: BLOG_LIST_LIMIT,
         offset: BLOG_LIST_LIMIT*(current -1),
     });
-
-    if (blog.length === 0) {
-        notFound();
-    }
 
     return (
         <>
