@@ -61,14 +61,8 @@ export default function Page() {
           <a href="https://yanagidani.github.io/pokemon/">https://yanagidani.github.io/pokemon/</a>
           <br />
 
-        <p>Intel企業プロジェクト</p>
-        <Image
-          src="/gazou.png"
-          alt="プロジェクト画像"
-          width={200}
-          height={300}
-          className={styles.gazouImage}
-          />
+        <p>Intel企業プロジェクト 作成中</p>
+
       </section>
 
     </div>
