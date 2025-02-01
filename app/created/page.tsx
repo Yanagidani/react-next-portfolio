@@ -48,6 +48,29 @@ export default function Page() {
         <h2>趣味</h2>
         <p>絵を描くこと、音楽を聴くこと</p>
       </section>
+
+      <section className={styles.create}>
+        <h2>制作物</h2>
+        <p>
+          自己紹介サイト<br />
+        </p>
+          <a href="https://yanagidani.github.io/about-me/">https://yanagidani.github.io/about-me/</a>
+      
+        <br />
+        <p>ポケモン図鑑サイト<br /></p>   
+          <a href="https://yanagidani.github.io/pokemon/">https://yanagidani.github.io/pokemon/</a>
+          <br />
+
+        <p>Intel企業プロジェクト</p>
+        <Image
+          src="/gazou.png"
+          alt="プロジェクト画像"
+          width={200}
+          height={300}
+          className={styles.gazouImage}
+          />
+      </section>
+
     </div>
   );
 }

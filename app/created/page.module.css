@@ -11,12 +11,12 @@
   font-size: 45px;
 }
 
-.intro, .hobbies, .skills {
+.intro, .hobbies, .skills, .create{
   margin-bottom: 20px;
   width: 100%; /* 横幅を100%に */
 }
 
-.hobbies h2, .skills h2, .name h2 {
+.hobbies h2, .skills h2, .name h2, .create h2 {
   text-align: left; /* h2を左寄せ */
   margin-left: 15%; /* 画面幅の10%分左に寄せる */
 }
@@ -24,6 +24,10 @@
 .intro p, .hobbies p, .skills p {
   text-align: center; /* pを中央に配置 */
   margin-top: 10px;
+}
+
+.href {
+  color: #4b0082;
 }
 
   /* 段落 */
