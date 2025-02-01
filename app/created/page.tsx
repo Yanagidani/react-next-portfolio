@@ -6,8 +6,8 @@ export default function Page() {
     <div className={styles.container}>
       <section className={styles.intro}>
         <h1>プロフィールを見に来てくれてありがとう！</h1>
-        <Image
-          src="/profile.jpg"
+       <Image
+          src=""
           alt="プロフィール写真"
           width={200}
           height={200}
