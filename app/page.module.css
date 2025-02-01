@@ -3,7 +3,7 @@
   position: relative;
   width: 100vw;
   height: 60vh;
-  background-color: #4b0082; /* 紫色の背景 */
+  background-color: #2c004c85; /* 紫色の背景 */
   overflow: hidden;
   display: flex;
   flex-direction: column;
