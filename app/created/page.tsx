@@ -24,7 +24,7 @@ export default function Page() {
 
       <section className={styles.hobbies}>
         <h2>専攻</h2>
-        <p>情報セキュリティ</p>
+        <p>ホワイトハッカー専攻</p>
       </section>
 
       <section className={styles.hobbies}>
