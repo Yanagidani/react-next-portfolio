@@ -1,17 +1,11 @@
-import Hero from "@/app/_components/Hero";
 import Sheet from "@/app/_components/Sheet";
-
-export const metadata = {
-    title: 'ブログ',
-};
+import Hero from "@/app/_components/Hero";
 
 type Props={
     children: React.ReactNode;
 };
 
-export const revalidate = 60;
-
-export default function Layout({ children }: Props) {
+export default function BlogLayout({ children }: Props) {
     return (
         <>
             <Hero  title="Blog" sub="ブログ" />
