@@ -1,36 +1,27 @@
-/* 全体のコンテナ */
 .container {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #f8f3fc, #eae1fa);
-    color: #333;
-    padding: 2rem;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* セクションの共通スタイル */
-  .section {
-    width: 100%;
-    max-width: 800px;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 16px;
-    padding: 2rem;
-    margin: 1rem 0;
-    text-align: left; /* 全体を左揃え */
-    position: relative;
-  }
-  
-  /* セクションタイトル */
-  .h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #6c5ce7;
-    margin-left: 2rem; /* 左位置を統一 */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 全体を中央に配置 */
+  justify-content: center;
+  text-align: center; /* デフォルトでテキストを中央に配置 */
+  padding: 20px;
+}
+
+.intro, .hobbies, .skills {
+  margin-bottom: 20px;
+  width: 100%; /* 横幅を100%に */
+}
+
+.intro h1, .hobbies h2, .skills h2, .name h2 {
+  text-align: left; /* h2を左寄せ */
+  margin-left: 15%; /* 画面幅の10%分左に寄せる */
+}
+
+.intro p, .hobbies p, .skills p {
+  text-align: center; /* pを中央に配置 */
+  margin-top: 10px;
+}
+
   /* 段落 */
   .section p {
     font-size: 1.2rem;

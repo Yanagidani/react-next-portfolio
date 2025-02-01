@@ -14,12 +14,12 @@ export default function Page() {
           className={styles.profileImage}
         />
         <h2 className={styles.name}>名前</h2>
-        <p>ここに自己紹介の詳細を書いてください。</p>
+        <p>柳谷 果音</p>
       </section>
 
       <section className={styles.hobbies}>
         <h2>学校</h2>
-        <p>通っている学校の情報を記載してください。</p>
+        <p>京都デザイン＆テクノロジー専門学校</p>
       </section>
 
       <section className={styles.hobbies}>
