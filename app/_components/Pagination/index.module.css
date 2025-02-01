@@ -17,6 +17,7 @@
     width: 36px;
     height: 36px;
     border-radius: var(--border-radius);
+    background-color: rgba(31, 4, 33, 0.449);
   }
   
   .current {

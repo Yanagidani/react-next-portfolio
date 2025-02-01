@@ -7,7 +7,14 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <Link href="/" className={styles.logoLink}>
-                <span className={styles.logo}>Myportforio</span>
+                <Image
+                    src="/Image(2).png"
+                    alt="土星のアイコン"
+                    className={styles.aikon}
+                    width={133}
+                    height={133}
+                    priority
+                />
             </Link>
             <Menu />
         </header>

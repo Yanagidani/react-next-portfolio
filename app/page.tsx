@@ -33,7 +33,7 @@ export default async function Home() {
         <div>
           <h1 className={styles.title}>My Portfolio</h1>
           <p className={styles.description}>
-            これは、ポートフォリオです。
+            Yanagidaniのポートフォリオです
           </p>
         </div>
         <Image
